@@ -1,0 +1,99 @@
+/* Style for the tabs container */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for each tab */
+  .tab {
+    display: none;
+    margin-right: 10px;
+    position: relative;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  /* Style for the active tab */
+  .tab.active {
+    display: flex;
+    background-color: #f1f1f1;
+    border-color: #ccc;
+    border-bottom-color: transparent;
+  }
+  
+  .tab::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent #ccc transparent;
+  }
+  
+  .tab::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #ccc transparent transparent;
+  }
+  
+  /* Style for the tab */
+  li {
+    display: inline-block;
+    flex-direction: column;;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+  }
+  
+  li.active {
+    background-color: #fff;
+    border-bottom-color: transparent;
+  }
+  
+  li:hover {
+    background-color: #e1e1e1;
+  }
+  
+  /* Style for the content container */
+  .content-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  /* Style for the button inside the content container */
+  .content-container button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style for the active button */
+  .content-container button.active {
+    background-color: #ccc;
+  }
+  
